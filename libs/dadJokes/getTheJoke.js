@@ -20,5 +20,5 @@ export const dadJoke = async () => {
 };
 
 const attachTags = (joke) => {
-  return `${joke} \n #NoServerNovember #DadJokes #Serverless #Netguru`;
+  return `${joke} \n #NoServerNovember #DadJokes #Serverless #Netguru \n https://github.com/Fiiii/Nov5DadJokes.git`;
 };
