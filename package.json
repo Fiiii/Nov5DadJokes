@@ -1,0 +1,62 @@
+{
+  "name": "NoServerNovember#DadJokes",
+  "version": "0.0.1",
+  "description": "Simple Dad Jokes generator for twitter",
+  "main": "src/handler.js",
+  "scripts": {
+    "offline": "sls offline start -r eu-central-1 ",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fiiii/Nov5DadJokes.git"
+  },
+  "author": "artur.figiel@netguru.com",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "bluebird": "^3.5.2",
+    "dotenv": "^6.0.0",
+    "source-map-support": "^0.5.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.0-beta.6",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "env-yaml": "^0.1.2",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-chai-expect": "^1.1.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.7.0",
+    "faker": "^4.1.0",
+    "jest": "^23.5.0",
+    "regenerator-runtime": "^0.12.1",
+    "serverless": "^1.30.3",
+    "serverless-domain-manager": "^2.3.6",
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-git-variables": "^2.0.0",
+    "serverless-plugin-package-json": "^0.1.0",
+    "serverless-stage-manager": "^1.0.5",
+    "serverless-webpack": "^5.2.0",
+    "supertest": "^3.3.0",
+    "webpack": "^4.17.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "html",
+      "text"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+service:
+  name: dad-jokes-service
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  defaultStage: integration
+  stages:
+    - integration
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, self:custom.defaultStage}
+  usagePlan:
+    quota:
+      limit: 1000000
+      offset: 2
+      period: MONTH
+    throttle:
+      burstLimit: 200
+      rateLimit: 100
+  cfLogs: true
+  region: eu-central-1
+  environment: ${file(env.yml):${self:provider.stage}, file(env.yml):default}
+
+functions:
+  hello:
+    handler: src/hello.handler
+    events:
+      - http:
+          method: get
+          path: v1/hello
+          authorizer:
+            name: template-authorizer
+            arn: ${self:provider.environment.AUTHORIZER_ARN}
+            identitySource: method.request.header.Authorization
+            resultTtlInSeconds: 0
+          cors: true
