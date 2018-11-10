@@ -30,15 +30,10 @@ provider:
   environment: ${file(env.yml):${self:provider.stage}, file(env.yml):default}
 
 functions:
-  hello:
-    handler: src/hello.handler
+  twitJoke:
+    handler: src/twitJoke.handler
     events:
       - http:
           method: get
-          path: v1/hello
-          authorizer:
-            name: template-authorizer
-            arn: ${self:provider.environment.AUTHORIZER_ARN}
-            identitySource: method.request.header.Authorization
-            resultTtlInSeconds: 0
+          path: v1/twitJoke
           cors: true

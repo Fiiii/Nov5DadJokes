@@ -1,5 +1,5 @@
 {
-  "name": "NoServerNovember#DadJokes",
+  "name": "dad-jokes",
   "version": "0.0.1",
   "description": "Simple Dad Jokes generator for twitter",
   "main": "src/handler.js",
@@ -14,9 +14,11 @@
   "author": "artur.figiel@netguru.com",
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "axios": "^0.18.0",
     "bluebird": "^3.5.2",
     "dotenv": "^6.0.0",
-    "source-map-support": "^0.5.9"
+    "source-map-support": "^0.5.9",
+    "twit": "^2.2.11"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

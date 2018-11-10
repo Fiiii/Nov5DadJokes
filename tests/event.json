@@ -1,5 +1,0 @@
-{
-  "type" : "TOKEN",
-  "authorizationToken" : "Bearer 42434234",
-  "methodArn":"arn:aws:execute-api:us-east-1:1234567890:apiId/stage/method/resourcePath"
-}
