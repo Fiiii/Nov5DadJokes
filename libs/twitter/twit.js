@@ -16,7 +16,7 @@ export const twitAJoke = async (joke) => {
   });
 
   try {
-    await Twitter.post('statuses/update', { status: `Hello Serverless! \n ${joke}` });
+    await Twitter.post('statuses/update', { status: `Hello @goserverless ! \n ${joke}` });
   } catch (error) {
     throw new Error(error);
   }
